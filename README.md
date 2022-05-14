@@ -1,6 +1,6 @@
 # Day19_Reworked:::
 
-****Welcome to the User Registration Program******
+****Welcome to the User Registration Program*****
 
 Rework on the assignment of Day 19 Based on Regex pattern and some validation
 

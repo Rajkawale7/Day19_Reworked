@@ -5,21 +5,28 @@ import java.util.regex.Pattern;
 
 public class UserRegistration {
     public static final Scanner scanner = new Scanner(System.in); //Scanner function declared as static
-    public static void validPassword() {
-        Scanner scanner = new Scanner(System.in);
-        //As a User need to a follow predefined Unique Password format.
-        System.out.print("Enter your Unique Password : ");
-        String password = scanner.nextLine();
-        String regex3 = "^(?=.*[0-9])"
-                + "(?=.*[a-z])(?=.*[A-Z])"
-                + "(?=.*[@#$%^&+=])"
-                + "(?=\\S+$).{8,20}$";
-        Pattern p3 = Pattern.compile(regex3);
-        Matcher m3 = p3.matcher(password);
-        boolean r3 = m3.matches();
-        if (r3)
-            System.out.println("Password is Valid");
-        else
-            System.out.println("Password is Invalid");
+
+    //User case UC-9
+    //Regex to check some valid Email Samples
+    public static void validEmailSamples() {
+        String regex = "^[A-Za-z0-9+_.-]+@(.+)$";
+
+        String Email1 = "Rajkawal00@gmail.com";
+        System.out.println(Pattern.compile(regex).matcher(Email1).matches());
+
+        String Email2 = "rajkawale@gmail.com";
+        System.out.println(Pattern.compile(regex).matcher(Email2).matches());
+
+        String Email3 = "raj_kawale@gmail.com";
+        System.out.println(Pattern.compile(regex).matcher(Email3).matches());
+
+        String Email4 = "712@gmail.com";
+        System.out.println(Pattern.compile(regex).matcher(Email4).matches());
+
+        String Email5 = "712@gmail.";
+        System.out.println(Pattern.compile(regex).matcher(Email5).matches());
+
+        String Email6 = "RAJ712@GMAIL.COM";
+        System.out.println(Pattern.compile(regex).matcher(Email6).matches());
     }
 }

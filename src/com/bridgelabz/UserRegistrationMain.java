@@ -5,10 +5,10 @@ import static com.bridgelabz.UserRegistration.scanner;
 public class UserRegistrationMain {
     public static void main(String args[]) {
 
-        System.out.println("Enter 1 : to validate First Name ");
+        System.out.println("Enter 2 : to validate Last Name ");
         switch (scanner.nextInt()){
-            case 1:
-                UserRegistration.validFirstName();
+            case 2:
+                UserRegistration.validLastName();
                 break;
              }
     }

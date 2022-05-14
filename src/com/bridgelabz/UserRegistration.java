@@ -5,20 +5,19 @@ import java.util.regex.Pattern;
 
 public class UserRegistration {
     public static final Scanner scanner = new Scanner(System.in); //Scanner function declared as static
-    public static boolean validLastName() {
-        //Regex pattern to check User's Last name
-
-        System.out.print("Enter the Last Name : ");
-        String lastName = scanner.next();
-        String regex = "^[A-Z]{1}[a-z]{2,}$";
+    public static boolean validUserEmail() {
+        //As a User need to enter the valid Email ID
+        System.out.print("Enter the Email Id : ");
+        String email = scanner.next();
+        String regex = "^[A-Za-z0-9+_.-]+@(.+)$";
         Pattern p = Pattern.compile(regex);
-        Matcher m = p.matcher(lastName);
+        Matcher m = p.matcher(email);
         boolean r = m.matches();
 
         if (r)
-            System.out.println("Last name is valid");
+            System.out.println("Email is valid");
         else
-            System.out.println("Last name is !Invalid");
+            System.out.println("Email is !Invalid");
         return r;
     }
 }
